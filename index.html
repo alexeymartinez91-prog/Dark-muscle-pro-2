@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><title>DARK MUSCLE PRO</title>
+<style>
+:root{--bg:#050505;--cd:#111;--ln:#2a2a2a;--rd:#e10600;--tx:#f2f2f2;--mu:#8f8f8f;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;min-height:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#000;z-index:10}
+header{padding:14px 16px 6px;text-align:center}
+header b{font-size:26px;letter-spacing:5px;font-weight:900}header b i{color:var(--rd);font-style:normal}
+header span{display:block;font-size:11px;letter-spacing:6px;color:var(--rd);font-weight:700}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;background:#000;border-bottom:1px solid var(--rd)}
+nav::-webkit-scrollbar{display:none}nav{overflow-x:auto;scrollbar-width:none}nav button{flex:1 0 auto;padding:0 13px;min-height:44px;background:none;border:0;color:var(--mu);font-weight:800;font-size:12px;letter-spacing:1.5px}
+nav button.on{color:#fff;box-shadow:inset 0 -3px var(--rd)}
+.w{max-width:720px;margin:auto;padding:12px 14px 60px}
+.card{background:var(--cd);border:1px solid var(--ln);border-left:3px solid var(--rd);border-radius:10px;padding:12px;margin-bottom:12px}
+h3{margin:0 0 8px;font-size:13px;letter-spacing:2px;color:var(--rd);text-transform:uppercase}
+label{display:block;font-size:11px;color:var(--mu);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+select,input,textarea{display:block;width:100%;margin-top:3px;min-height:44px;background:#000;color:var(--tx);border:1px solid var(--ln);border-radius:8px;padding:8px 10px;font-size:16px;font-family:inherit}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+.btn{width:100%;min-height:48px;margin:0 0 10px;background:var(--rd);color:#fff;border:0;border-radius:10px;font-weight:900;letter-spacing:2px;font-size:14px}
+.btn.g{background:#000;border:1px solid var(--rd)}
+.btn.s{width:48px;margin:0}
+.row{display:flex;gap:8px;margin-bottom:8px}.row input{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.chip{min-height:38px;padding:0 12px;background:#000;color:var(--tx);border:1px solid var(--ln);border-radius:20px;font-weight:700;font-size:13px}
+.chip.on{background:var(--rd);border-color:var(--rd)}
+.ex{border-top:1px solid var(--ln);padding:8px 0}.ex small{color:var(--mu);margin-left:6px}
+.ctl{display:flex;align-items:center;gap:5px;margin-top:6px;flex-wrap:wrap}
+.ctl .b{width:40px;height:40px;background:#000;color:#fff;border:1px solid var(--ln);border-radius:8px;font-size:16px}
+.ctl input.n{width:52px;margin:0;text-align:center;padding:4px}
+.pl{display:grid;grid-template-columns:1fr auto auto;gap:4px 10px;padding:7px 0;border-top:1px solid var(--ln);font-size:14px}
+.pl em{color:var(--rd);font-style:normal;font-weight:800}.pl .no{grid-column:1/-1;color:var(--mu);font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:6px 4px;border-top:1px solid var(--ln);text-align:left}th{color:var(--mu);font-size:11px}
+tr.dl td{color:var(--rd);font-weight:800}
+.vb{display:grid;grid-template-columns:86px 1fr 70px;gap:8px;align-items:center;font-size:13px;margin:5px 0}
+.vb div{height:8px;background:#000;border-radius:4px;overflow:hidden}.vb div i{display:block;height:100%;background:var(--rd)}
+.m{color:var(--mu);font-size:12px;margin:4px 0 0}
+#t{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--rd);padding:10px 16px;border-radius:20px;font-weight:700;display:none;z-index:20}
+.btn.t{width:auto;padding:0 14px;margin:0;min-height:40px;font-size:12px}
+.sr{display:grid;grid-template-columns:22px 1fr 1fr 54px 46px;gap:6px;align-items:center;margin-bottom:6px}.sr input{margin:0;text-align:center;padding:4px}.sr b{color:var(--mu);font-size:13px;text-align:center}
+.ok{height:44px;background:#000;border:1px solid var(--ln);border-radius:8px;color:var(--mu);font-size:18px}.ok.on{background:var(--rd);color:#fff;border-color:var(--rd)}
+.pr{color:var(--rd);font-weight:900;font-size:12px}.hd{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.bar{display:grid;grid-template-columns:50px 1fr 64px;gap:8px;align-items:center;font-size:12px;margin:5px 0}.bar div{height:9px;background:#000;border-radius:5px;overflow:hidden}.bar i{display:block;height:100%;background:var(--rd)}
+.st{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px}.st div{background:#000;border:1px solid var(--ln);border-radius:8px;padding:8px;text-align:center}.st b{display:block;font-size:18px;color:#fff}.st span{font-size:10px;color:var(--mu);letter-spacing:1px}
+#tm{position:fixed;left:14px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));display:none;background:var(--rd);text-align:center;padding:14px;border-radius:12px;font-weight:900;letter-spacing:2px;z-index:20}
+@media print{body{background:#fff;color:#000}body::before,header,nav,button,.noprint{display:none!important}.card{background:#fff;border-color:#999;color:#000}}
+</style></head><body>
+<header><b>DARK <i>MUSCLE</i></b><span>PRO · TRAIN HARD. TRACK EVERYTHING.</span></header>
+<nav id="nv"></nav><div class="w" id="app"></div><div id="rec" style="display:none;position:fixed;inset:0;z-index:50;background:#050505;overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 14px"></div><div id="tm" onclick="rs0()"></div><div id="t"></div>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+const MU=['Pecho','Espalda','Hombro','Bíceps','Tríceps','Cuádriceps','Isquios','Glúteo','Gemelo','Abdomen'];
+const LM={Pecho:[8,12,20],Espalda:[10,14,22],Hombro:[8,14,22],'Bíceps':[6,12,20],'Tríceps':[6,10,18],'Cuádriceps':[8,12,18],Isquios:[6,10,16],'Glúteo':[0,8,16],Gemelo:[8,12,20],Abdomen:[0,8,16]};
+const E=`Press banca plana|0|1|g;Press inclinado con mancuernas|0|1|d;Press inclinado con barra|0|1|g;Press en máquina|0|1|g;Fondos en paralelas|0|1|b;Flexiones lastradas|0|1|b;Aperturas en polea|0|0|g;Aperturas con mancuernas|0|0|d;Pec deck|0|0|g;Dominadas|1|1|b;Jalón al pecho|1|1|g;Remo con barra|1|1|g;Remo con mancuerna|1|1|d;Remo en T|1|1|g;Remo en polea baja|1|1|g;Remo invertido|1|1|b;Pullover en polea|1|0|g;Press militar con barra|2|1|g;Press de hombro con mancuernas|2|1|d;Pike push-up|2|1|b;Elevaciones laterales|2|0|d;Laterales en polea|2|0|g;Pájaros con mancuernas|2|0|d;Face pull|2|0|g;Curl con barra|3|0|g;Curl con mancuernas|3|0|d;Curl martillo|3|0|d;Curl predicador|3|0|g;Curl inclinado|3|0|d;Press cerrado|4|1|g;Press francés|4|0|g;Extensión en polea|4|0|g;Extensión sobre la cabeza|4|0|d;Fondos en banco|4|0|b;Flexiones diamante|4|1|b;Sentadilla trasera|5|1|g;Prensa de piernas|5|1|g;Sentadilla hack|5|1|g;Sentadilla búlgara|5|1|d;Sentadilla goblet|5|1|d;Zancadas|5|1|d;Extensión de cuádriceps|5|0|g;Sentadilla a una pierna|5|1|b;Peso muerto rumano|6|1|g;Peso muerto rumano con mancuernas|6|1|d;Curl femoral tumbado|6|0|g;Curl femoral sentado|6|0|g;Curl nórdico|6|0|b;Buenos días|6|1|g;Hip thrust|7|1|g;Hip thrust con mancuerna|7|1|d;Patada en polea|7|0|g;Abducción en máquina|7|0|g;Puente de glúteo a una pierna|7|0|b;Gemelo de pie|8|0|g;Gemelo sentado|8|0|g;Gemelo con mancuerna|8|0|d;Gemelo en escalón|8|0|b;Crunch en polea|9|0|g;Elevación de piernas|9|0|b;Rueda abdominal|9|0|b;Plancha|9|0|b;Crunch|9|0|b`.split(';').map(s=>{const[n,m,c,q]=s.split('|');return{n,m:MU[m],c:+c,q}});
+const SL={FB:[[5,1],[0,1],[1,1],[6,1],[2,1],[3,1],[4,1]],U:[[0,2],[1,2],[2,1],[3,1],[4,1]],L:[[5,2],[6,2],[7,1],[8,1],[9,1]],P:[[0,2],[2,2],[4,2]],Q:[[1,3],[2,1],[3,2]],L2:[[5,2],[6,2],[7,1],[8,1]]};
+const NM={FB:'Full Body',U:'Torso',L:'Pierna',P:'Empuje',Q:'Tirón',L2:'Pierna'};
+const TP={2:['FB','FB'],3:['FB','FB','FB'],4:['U','L','U','L'],5:['P','Q','L2','U','L'],6:['P','Q','L2','P','Q','L2']};
+const RP={h:{c:[6,10],i:[10,15]},f:{c:[3,6],i:[8,12]},m:{c:[5,8],i:[8,12]}};
+const GL={h:'Hipertrofia',m:'Mixto',f:'Fuerza'},LV=['Principiante','Intermedio','Avanzado'],MD={lineal:'Lineal',dup:'Ondulada (DUP)',bloques:'Bloques'};
+const DEF={goal:'h',lv:1,days:4,eq:'g',focus:'',weeks:6,model:'lineal',de:0,dv:0.5};
+let R=(()=>{try{const r=JSON.parse(localStorage.getItem('dmrb.v1'));if(r&&Array.isArray(r.days)){r.cfg=Object.assign({},DEF,r.cfg);return r}}catch(e){}return{name:'Mi rutina',cfg:{...DEF},days:[]}})();
+let S={tab:0,wk:0,pk:null,out:''};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function sv(){try{localStorage.setItem('dmrb.v1',JSON.stringify(R))}catch(e){}}
+function toast(m){const t=$('#t');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',2200)}
+const op=(a,v)=>a.map(([k,t])=>`<option value="${k}"${k==v?' selected':''}>${t}</option>`).join('');
+const sl=(k,a,l)=>`<label>${l}<select onchange="cf('${k}',this.value)">${op(a,R.cfg[k])}</select></label>`;
+function cf(k,v){R.cfg[k]=['lv','days','weeks','de','dv'].includes(k)?+v:v;sv()}
+function mkx(e,f){const c=R.cfg,rp=RP[c.goal][e.c?'c':'i'];return{n:e.n,m:e.m,c:e.c,sets:(e.c?[2,3,4][+c.lv]:[2,3,3][+c.lv])+f,reps:rp.slice(),rest:e.c?(c.goal=='f'?180:150):75}}
+function gen(){const c=R.cfg,ok=e=>c.eq=='g'||(c.eq=='d'&&e.q!='g')||(c.eq=='b'&&e.q=='b'),occ={},cnt={},days=[];
+TP[c.days].forEach((k,di)=>{cnt[k]=(cnt[k]||0)+1;const used=[],ex=[];
+SL[k].forEach(([m,n])=>{const foc=MU[m]==c.focus?1:0,pool=E.filter(e=>e.m==MU[m]&&ok(e)),cs=pool.filter(e=>e.c),is=pool.filter(e=>!e.c),u=occ[m]=(occ[m]||0)+1;
+for(let i=0;i<n+foc;i++){const a=(i==0&&cs.length)?cs:(is.length?is:cs);if(!a.length)break;let p;for(let t=0;t<a.length;t++){p=a[(u-1+Math.max(0,i-1)+t)%a.length];if(!used.includes(p.n))break}
+if(used.includes(p.n))continue;used.push(p.n);ex.push(mkx(p,foc))}});
+days.push({name:NM[k]+' '+'ABC'[cnt[k]-1],ex})});
+R.days=days;S.tab=2;S.wk=0;sv();render();toast('Rutina generada')}
+function blank(){R.days=[{name:'Día 1',ex:[]}];sv();S.tab=1;render()}
+function wi(w){const c=R.cfg,D=+c.de,W=+c.weeks;let nd=0,t=0;for(let i=0;i<W;i++){if(!(D>0&&(i+1)%D==0)){t++;if(i<w)nd++}}return{dl:D>0&&(w+1)%D==0,pos:D>0?w%D:w,ph:Math.min(2,Math.floor(nd*3/Math.max(1,t)))}}
+function xw(x,di,w){const c=R.cfg,i=wi(w),lv=+c.lv,mr=[2,1,0][lv],r0=[4,3,3][lv];let s=x.sets,lo=x.reps[0],hi=x.reps[1],rir,note;
+if(i.dl){s=Math.max(1,Math.round(s*c.dv));rir=4;note='Descarga −10 %'}
+else if(c.model=='bloques'){const p=i.ph;s=Math.max(1,s+[1,0,-1][p]);const sh=x.c?[3,0,-2][p]:[3,0,-1][p];lo+=sh;hi+=sh;rir=Math.max(mr,[3,2,1][p]);note=['Moderada','Sube ~2,5 %','Alta, marcas'][p]}
+else{s+=Math.min(2,Math.floor((i.pos+1)/2));rir=Math.max(mr,r0-i.pos);if(c.model=='dup'&&x.c){const sh=[-3,0,4][di%3];lo+=sh;hi+=sh}note=w==0?'Calibra al RIR':'+2,5 % o +1 rep'}
+lo=Math.max(1,lo);hi=Math.max(lo+1,hi);return{s,lo,hi,rir,note}}
+function tl(w){const i=wi(w),m=R.cfg.model;return i.dl?'Descarga':m=='bloques'?['Acumulación','Intensificación','Realización'][i.ph]:m=='dup'?'Ondulada':'Progresiva'}
+function vol(w){const v={};R.days.forEach((d,di)=>d.ex.forEach(x=>v[x.m]=(v[x.m]||0)+xw(x,di,w).s));return v}
+const tot=w=>Object.values(vol(w)).reduce((a,b)=>a+b,0);
+function rirOf(w){const x=R.days[0]&&R.days[0].ex[0];return x?xw(x,0,w).rir:'-'}
+const nvs=['GENERAR','EDITAR','PLAN','ENTRENO','HISTORIAL','PROGRESO','PRO','EXPORTAR','CUENTA','ADMIN'];
+function vG(){return`<div class=card><h3>Generador automático</h3><label>Nombre<input value="${esc(R.name)}" onchange="R.name=this.value;sv()"></label><div class=g2>${sl('goal',[['h','Hipertrofia'],['m','Mixto'],['f','Fuerza']],'Objetivo')}${sl('lv',[[0,'Principiante'],[1,'Intermedio'],[2,'Avanzado']],'Nivel')}${sl('days',[2,3,4,5,6].map(n=>[n,n+' días']),'Días / semana')}${sl('eq',[['g','Gimnasio'],['d','Mancuernas'],['b','Casa']],'Material')}</div>${sl('focus',[['','Sin prioridad'],...MU.map(m=>[m,m])],'Músculo prioritario (+1 ejercicio y +1 serie)')}</div>
+<div class=card><h3>Periodización y descargas</h3><div class=g2>${sl('weeks',[4,5,6,7,8,9,10,11,12].map(n=>[n,n+' semanas'+(n>6?PL(''):'')]),'Mesociclo')}${sl('model',Object.entries(MD).map(([k,t])=>[k,k!='lineal'?PL(t):t]),'Modelo')}${sl('de',[[0,'Sin descarga'],[3,PL('Cada 3 sem.')],[4,PL('Cada 4 sem.')],[5,PL('Cada 5 sem.')],[6,PL('Cada 6 sem.')]],'Descarga')}${sl('dv',[[0.4,'40 % series'],[0.5,'50 % series'],[0.6,'60 % series']],'Volumen en descarga')}</div><p class=m>El RIR baja cada semana, las series suben cada dos y la descarga recorta volumen y carga. Los ajustes valen también para rutinas manuales. Generar sustituye la rutina actual.</p></div>
+<button class=btn onclick="gen()">GENERAR RUTINA</button><button class="btn g" onclick="blank()">CREAR MANUAL EN BLANCO</button>`}
+function vE(){if(!R.days.length)return`<div class=card>No hay rutina. Genera una o empieza una en blanco.</div><button class=btn onclick="blank()">NUEVA RUTINA MANUAL</button>`;let h='';
+R.days.forEach((d,i)=>{h+=`<div class=card><div class=row><input value="${esc(d.name)}" onchange="R.days[${i}].name=this.value;sv()"><button class="btn g s" onclick="dd(${i})">✕</button></div>`;
+d.ex.forEach((x,j)=>{h+=`<div class=ex><b>${esc(x.n)}</b><small>${x.m}</small><div class=ctl><button class=b onclick="ch(${i},${j},-1)">−</button><b>${x.sets}</b><button class=b onclick="ch(${i},${j},1)">+</button><input class=n type=number inputmode=numeric value=${x.reps[0]} onchange="rp(${i},${j},0,this.value)"><span>–</span><input class=n type=number inputmode=numeric value=${x.reps[1]} onchange="rp(${i},${j},1,this.value)"><button class=b onclick="mv(${i},${j},-1)">↑</button><button class=b onclick="mv(${i},${j},1)">↓</button><button class=b onclick="rx(${i},${j})">✕</button></div></div>`});
+if(S.pk&&S.pk.d==i){h+=`<div class=chips>${MU.map(m=>`<button class="chip${S.pk.m==m?' on':''}" onclick="S.pk.m='${m}';render()">${m}</button>`).join('')}</div>`;E.forEach((e,k)=>{if(e.m==S.pk.m)h+=`<button class="chip" style="width:100%;text-align:left;margin-bottom:5px" onclick="ad(${i},${k})">+ ${e.n}</button>`});h+=`<button class="btn g" onclick="S.pk=null;render()">CERRAR</button>`}
+else h+=`<button class="btn g" onclick="S.pk={d:${i},m:'Pecho'};render()">+ AÑADIR EJERCICIO</button>`;h+=`</div>`});
+return h+`<button class=btn onclick="R.days.push({name:'Día '+(R.days.length+1),ex:[]});sv();render()">+ AÑADIR DÍA</button>`}
+function dd(i){R.days.splice(i,1);S.pk=null;sv();render()}
+function ch(i,j,d){const x=R.days[i].ex[j];x.sets=Math.max(1,Math.min(10,x.sets+d));sv();render()}
+function rp(i,j,k,v){const x=R.days[i].ex[j];x.reps[k]=Math.max(1,+v||1);if(x.reps[1]<=x.reps[0])x.reps[1]=x.reps[0]+1;sv();render()}
+function mv(i,j,d){const a=R.days[i].ex,k=j+d;if(k<0||k>=a.length)return;[a[j],a[k]]=[a[k],a[j]];sv();render()}
+function rx(i,j){R.days[i].ex.splice(j,1);sv();render()}
+function ad(i,k){R.days[i].ex.push(mkx(E[k],0));sv();render()}
+function vP(){if(!R.days.length)return`<div class=card>Aún no hay rutina. Genera una automática o crea una manual.</div>`;const W=+R.cfg.weeks,w=Math.min(S.wk,W-1);
+let h=`<div class=card><h3>${esc(R.name)}</h3><div class=chips>`;for(let i=0;i<W;i++)h+=`<button class="chip${i==w?' on':''}" onclick="S.wk=${i};render()">S${i+1}${wi(i).dl?' ▼':''}</button>`;
+h+=`</div><b>Semana ${w+1}: ${tl(w)}</b><p class=m>RIR objetivo ${rirOf(w)} · ${tot(w)} series semanales</p></div>`;
+R.days.forEach((d,di)=>{h+=`<div class=card><h3>${esc(d.name)}</h3>`;d.ex.forEach(x=>{const k=xw(x,di,w);h+=`<div class=pl><span>${esc(x.n)}</span><em>${k.s} × ${k.lo}–${k.hi}</em><span>RIR ${k.rir}</span><span class=no>${x.m} · descanso ${x.rest} s · ${k.note}</span></div>`});h+=`</div>`});
+const v=vol(w);h+=`<div class=card><h3>Volumen semanal por músculo</h3>`;MU.forEach(m=>{if(!v[m])return;const[a,b,c]=LM[m],n=v[m],st=n<a?'bajo':n<=b?'óptimo':n<=c?'alto':'excesivo';h+=`<div class=vb><span>${m}</span><div><i style="width:${Math.min(100,n/c*100)}%"></i></div><span>${n} · ${st}</span></div>`});h+=`<p class=m>Referencia orientativa de series efectivas por semana (mínimo, óptimo, máximo recuperable).</p></div><div class=card><h3>Mesociclo</h3><table><tr><th>Sem.</th><th>Fase</th><th>RIR</th><th>Series</th></tr>`;
+for(let i=0;i<W;i++)h+=`<tr class="${wi(i).dl?'dl':''}"><td>${i+1}</td><td>${tl(i)}</td><td>${rirOf(i)}</td><td>${tot(i)}</td></tr>`;return h+`</table></div>`}
+function vX(){return`<div class=card><h3>Exportar</h3><button class=btn onclick="xp('pdf')">PDF IMPRIMIBLE</button><button class="btn g" onclick="xp('csv')">HOJA EDITABLE (CSV)</button><button class="btn g" onclick="xp('json')">COPIA EDITABLE (JSON)</button><label>Importar copia JSON<input type=file accept=".json,application/json" onchange="imp(this)"></label><p class=m>Gratis y sin cuenta. Tus datos se guardan solo en este dispositivo.</p></div>${S.out?`<div class=card><h3>Copia manual</h3><textarea rows=8 readonly>${esc(S.out)}</textarea></div>`:''}`}
+function rows(){const r=[['Semana','Fase','Día','Ejercicio','Músculo','Series','Reps','RIR','Descanso (s)','Carga']];for(let w=0;w<+R.cfg.weeks;w++)R.days.forEach((d,di)=>d.ex.forEach(x=>{const k=xw(x,di,w);r.push([w+1,tl(w),d.name,x.n,x.m,k.s,k.lo+'-'+k.hi,k.rir,x.rest,k.note])}));return r}
+const en=t=>String(t).replace(/[—–−]/g,'-').replace(/[^\x20-\xFF]/g,'?').replace(/([\\()])/g,'\\$1');
+function pdfL(){const c=R.cfg,W=+c.weeks,L=[];
+L.push({c:[[40,'DARK MUSCLE']],z:26,b:1,r:1},{c:[[40,'ROUTINE BUILDER']],z:12,b:1,g:6},{c:[[40,R.name]],z:16,b:1,g:6},{c:[[40,`${GL[c.goal]} · ${LV[c.lv]} · ${R.days.length} días/sem · ${W} semanas · ${MD[c.model]} · ${c.de>0?'descarga cada '+c.de+' sem.':'sin descarga'}`]],g:10},{c:[[40,'MESOCICLO'],[200,'FASE'],[330,'RIR'],[400,'SERIES/SEM']],b:1,r:1});
+for(let w=0;w<W;w++)L.push({c:[[40,'Semana '+(w+1)],[200,tl(w)],[330,''+rirOf(w)],[400,''+tot(w)]]});
+for(let w=0;w<W;w++){L.push({pb:1,c:[[40,`SEMANA ${w+1} · ${tl(w)}`]],z:14,b:1,r:1,g:6});R.days.forEach((d,di)=>{L.push({c:[[40,d.name]],b:1,z:11,g:6},{c:[[40,'Ejercicio'],[270,'Series × reps'],[350,'RIR'],[390,'Desc.'],[440,'Carga']],b:1,z:8});d.ex.forEach(x=>{const k=xw(x,di,w);L.push({c:[[40,x.n.slice(0,40)],[270,`${k.s} × ${k.lo}-${k.hi}`],[350,''+k.rir],[390,x.rest+' s'],[440,k.note]],z:8})})})}return L}
+function mkPdf(L){const P=[];let c=[],y=790;const nw=()=>{P.push(c);c=[];y=790};
+for(const l of L){if(l.pb&&c.length)nw();const z=l.z||9,lh=z*1.5+(l.g||0);if(y-lh<50)nw();y-=lh;for(const[x,t]of l.c)c.push(`BT ${l.b?'/F2':'/F1'} ${z} Tf ${l.r?'0.88 0.02 0':'0 0 0'} rg ${x} ${y.toFixed(1)} Td (${en(t)}) Tj ET`)}P.push(c);
+let o='%PDF-1.4\n',of=[];const add=(n,b)=>{of[n]=o.length;o+=n+' 0 obj\n'+b+'\nendobj\n'};const N=P.length;
+add(1,'<< /Type /Catalog /Pages 2 0 R >>');add(2,`<< /Type /Pages /Count ${N} /Kids [${P.map((_,i)=>(6+2*i)+' 0 R').join(' ')}] >>`);
+add(3,'<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');add(4,'<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+P.forEach((p,i)=>{const s='0 0 0 rg 0 812 595 30 re f BT /F2 9 Tf 0.88 0.02 0 rg 40 823 Td (DARK MUSCLE  \xB7  ROUTINE BUILDER) Tj ET\n'+p.join('\n')+`\nBT /F1 8 Tf 0.4 g 40 28 Td (${i+1} / ${N}) Tj ET`;add(5+2*i,`<< /Length ${s.length} >>\nstream\n${s}\nendstream`);add(6+2*i,`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents ${5+2*i} 0 R >>`)});
+const T=5+2*N;let x=o.length;o+=`xref\n0 ${T}\n0000000000 65535 f \n`+of.slice(1).map(n=>String(n).padStart(10,'0')+' 00000 n \n').join('')+`trailer\n<< /Size ${T} /Root 1 0 R >>\nstartxref\n${x}\n%%EOF`;
+const b=new Uint8Array(o.length);for(let i=0;i<o.length;i++)b[i]=o.charCodeAt(i)&255;return b}
+async function xp(k){if(!R.days.length)return toast('Crea una rutina primero');const nm=(R.name.replace(/[^\w]+/g,'_')||'rutina');let f,d;
+if(k=='pdf'){f=nm+'.pdf';d=mkPdf(pdfL())}else if(k=='csv'){f=nm+'.csv';d='\uFEFF'+rows().map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n')}else{f=nm+'.json';d=JSON.stringify({app:'DARK MUSCLE ROUTINE BUILDER',v:1,routine:R},null,1)}
+try{const D=window.claude&&await claude.use('downloads');if(D){await D.save({filename:f,data:d});return toast('Archivo listo')}}catch(e){if(e&&e.code=='declined')return}
+dl(f,d)}
+async function imp(i){try{const j=JSON.parse(await i.files[0].text()).routine;if(!Array.isArray(j.days)||!j.days.every(d=>Array.isArray(d.ex)&&d.ex.every(x=>x.n&&Array.isArray(x.reps))))throw 0;j.cfg=Object.assign({},DEF,j.cfg);R=j;sv();S.tab=2;S.wk=0;render();toast('Rutina importada')}catch(e){toast('Archivo no válido')}}
+function render(){$('#nv').innerHTML=nvs.slice(0,A.admin?10:9).map((n,i)=>`<button class="${S.tab==i?'on':''}" onclick="S.tab=${i};S.out='';render();scrollTo(0,0)">${n}</button>`).join('');$('#app').innerHTML=[vG,vE,vP,vT,vH,lvP,vPRO,vX,vA,vAD][S.tab]();const ob=$('#nv .on');if(ob)$('#nv').scrollLeft=ob.offsetLeft-70}
+
+const NMS='Press banca plana;Press inclinado con mancuernas;Press inclinado con barra;Press en máquina;Fondos en paralelas;Aperturas en polea;Pec deck;Dominadas;Jalón al pecho;Remo con barra;Remo con mancuerna;Remo en T;Remo en polea baja;Press militar con barra;Press de hombro con mancuernas;Elevaciones laterales;Laterales en polea;Pájaros con mancuernas;Face pull;Curl con barra;Curl con mancuernas;Curl martillo;Curl predicador;Press cerrado;Press francés;Extensión en polea;Extensión sobre la cabeza;Sentadilla trasera;Prensa de piernas;Sentadilla hack;Sentadilla búlgara;Zancadas;Extensión de cuádriceps;Peso muerto;Peso muerto rumano;Curl femoral tumbado;Curl femoral sentado;Hip thrust;Gemelo de pie;Gemelo sentado;Crunch en polea;Elevación de piernas'.split(';');
+const today=()=>new Date().toLocaleDateString('en-CA'),fd=d=>d.slice(8)+'/'+d.slice(5,7);
+let L=(()=>{try{const l=JSON.parse(localStorage.getItem('dmlog.v1'));if(l&&Array.isArray(l.sessions))return l}catch(e){}return{sessions:[],cur:null,routine:null}})();
+let LS={tab:0,px:'',open:0,rs:90,w:0},C;
+function lsv(){try{localStorage.setItem('dmlog.v1',JSON.stringify(L))}catch(e){}}
+const e1=(k,r)=>r<=0||k<=0?0:r==1?k:Math.round(k*(1+r/30)*10)/10;
+const vs=s=>s.filter(x=>+x.reps>0);
+function hist(n){return L.sessions.filter(s=>s.ex.some(x=>x.n==n)).sort((a,b)=>a.date<b.date?-1:1).map(s=>{const sets=s.ex.find(x=>x.n==n).sets;return{date:s.date,sets,e:Math.max(...sets.map(x=>e1(x.kg,x.reps))),kg:Math.max(...sets.map(x=>x.kg)),ton:sets.reduce((a,x)=>a+x.kg*x.reps,0)}})}
+function stats(n){const h=hist(n);return{n:h.length,e1:Math.max(0,...h.map(x=>x.e)),kg:Math.max(0,...h.map(x=>x.kg)),last:h[h.length-1]}}
+function cur(){if(!L.cur)L.cur={date:today(),name:'',ex:[]};C=L.cur;return C}
+const names=()=>[...new Set([...NMS,...L.sessions.flatMap(s=>s.ex.map(x=>x.n))])].sort();
+const lastKg=n=>{const p=(L.prog||{})[n],s=stats(n).last;if(p&&p.st=='ok'&&s&&p.on==s.date)return p.kg;return s?s.sets[0].kg:''};
+function addEx(n,t,k){C.ex.push({n,t:t||'',sets:Array.from({length:k||3},()=>({kg:lastKg(n),reps:'',rir:'',ok:0}))})}
+function vT(){cur();let h=`<div class=card><h3>Sesión</h3><div class=g2><label>Fecha<input type=date value="${C.date}" onchange="C.date=this.value;lsv()"></label><label>Nombre<input value="${esc(C.name)}" placeholder="Torso A" onchange="C.name=this.value;lsv()"></label></div>`;
+if(R.days.length)h+=`<label>Semana del mesociclo<select onchange="LS.w=+this.value">${Array.from({length:+R.cfg.weeks},(_,k)=>`<option value=${k}${k==(LS.w||0)?' selected':''}>LS${k+1} · ${tl(k)}</option>`).join('')}</select></label><label>Cargar día de tu rutina<select onchange="ld(this.value)"><option value="">Elegir…</option>${R.days.map((d,i)=>`<option value=${i}>${esc(d.name)} (${d.ex.length})</option>`).join('')}</select></label>`;
+h+=`<label>Descanso automático<select onchange="LS.rs=+this.value">${[60,90,120,180].map(v=>`<option value=${v}${v==LS.rs?' selected':''}>${v} s</option>`).join('')}</select></label></div>`;
+C.ex.forEach((x,i)=>{const st=stats(x.n);h+=`<div class=card><div class=hd><b>${esc(x.n)}</b><button class="btn g t" onclick="lrx(${i})">✕</button></div>`;
+if(x.t)h+=`<p class=m>Objetivo: ${esc(x.t)}</p>`;
+if(st.last)h+=`<p class=m>Última (${fd(st.last.date)}): ${st.last.sets.map(s=>s.kg+'×'+s.reps).join(' · ')} · mejor e1RM ${st.e1}</p>`;
+x.sets.forEach((s,j)=>{const p=s.ok&&st.n&&e1(+s.kg,+s.reps)>st.e1;h+=`<div class=sr><b>${j+1}</b><input type=number inputmode=decimal step=0.5 placeholder="kg" value="${s.kg}" onchange="U(${i},${j},'kg',this.value)"><input type=number inputmode=numeric placeholder="reps" value="${s.reps}" onchange="U(${i},${j},'reps',this.value)"><input type=number inputmode=numeric placeholder="RIR" value="${s.rir}" onchange="U(${i},${j},'rir',this.value)"><button class="ok${s.ok?' on':''}" onclick="ok(${i},${j})">✓</button></div>${p?'<span class=pr>🏆 NUEVO RÉCORD e1RM</span>':''}`});
+h+=`<div class=row><button class="btn g t" onclick="as(${i})">+ SERIE</button><button class="btn g t" onclick="ds(${i})">− SERIE</button></div></div>`});
+h+=`<div class=card><h3>Añadir ejercicio</h3><input id=nx list=nl placeholder="Escribe o elige…"><datalist id=nl>${names().map(n=>`<option value="${esc(n)}">`).join('')}</datalist><div style="height:10px"></div><button class="btn g" onclick="ax()">+ AÑADIR</button></div>
+<button class=btn onclick="fin()">GUARDAR ENTRENO</button><button class="btn g" onclick="L.cur=null;lsv();render()">DESCARTAR BORRADOR</button>`;return h}
+function ld(i){if(i==='')return;const d=R.days[i];C.name=d.name;C.ex=[];d.ex.forEach(x=>{const k=xw(x,+i,LS.w||0);addEx(x.n,k.s+'×'+k.lo+'-'+k.hi+' · RIR '+k.rir,k.s)});lsv();render()}
+function U(i,j,k,v){C.ex[i].sets[j][k]=v;lsv()}
+function ok(i,j){const s=C.ex[i].sets[j];s.ok=s.ok?0:1;lsv();render();if(s.ok)rt()}
+function as(i){const a=C.ex[i].sets,l=a[a.length-1]||{};a.push({kg:l.kg||'',reps:'',rir:'',ok:0});lsv();render()}
+function ds(i){C.ex[i].sets.pop();lsv();render()}
+function lrx(i){C.ex.splice(i,1);lsv();render()}
+function ax(){const n=$('#nx').value.trim();if(!n)return;addEx(n);lsv();render()}
+function fin(){const ex=C.ex.map(x=>({n:x.n,sets:vs(x.sets).map(s=>({kg:+s.kg||0,reps:+s.reps,rir:s.rir===''?null:+s.rir}))})).filter(x=>x.sets.length);if(!ex.length)return toast('Añade al menos una serie con repeticiones');
+const pr=ex.filter(x=>{const st=stats(x.n);return st.n&&Math.max(...x.sets.map(s=>e1(s.kg,s.reps)))>st.e1}).map(x=>x.n);
+L.sessions.push({id:Date.now(),date:C.date,name:C.name||'Entreno',ex,pr});L.cur=null;lsv();toast(pr.length?'🏆 '+pr.length+' récord(s) nuevo(s)':'Entreno guardado');S.tab=4;render()}
+let T=0,TI=null;
+function rt(){T=Date.now()+LS.rs*1000;if(!TI)TI=setInterval(tick,500);tick()}
+function rs0(){clearInterval(TI);TI=null;$('#tm').style.display='none'}
+function tick(){const el=$('#tm'),r=Math.ceil((T-Date.now())/1000);el.style.display='block';if(r<=0){el.textContent='¡YA! A POR LA SIGUIENTE';clearInterval(TI);TI=null;try{navigator.vibrate&&navigator.vibrate([200,100,200])}catch(e){}setTimeout(()=>{if(!TI)el.style.display='none'},3000);return}el.textContent='DESCANSO '+Math.floor(r/60)+':'+String(r%60).padStart(2,'0')+' · toca para cerrar'}
+const tonS=s=>s.ex.reduce((a,x)=>a+x.sets.reduce((b,y)=>b+y.kg*y.reps,0),0);
+function vH(){if(!L.sessions.length)return`<div class=card>Aún no hay entrenos guardados.</div>`;let h='';[...L.sessions].sort((a,b)=>a.date<b.date?1:-1).forEach(s=>{const o=LS.open==s.id;h+=`<div class=card><div class=hd onclick="LS.open=${o?0:s.id};render()"><div><b>${esc(s.name)}</b><p class=m>${fd(s.date)}/${s.date.slice(0,4)} · ${s.ex.length} ejercicios · ${Math.round(tonS(s))} kg de volumen</p></div><span class=pr>${s.pr&&s.pr.length?'🏆 '+s.pr.length:''}</span></div>`;
+if(o){s.ex.forEach(x=>h+=`<p class=m><b style="color:#fff">${esc(x.n)}</b>${s.pr&&s.pr.includes(x.n)?' <span class=pr>PR</span>':''}<br>${x.sets.map(y=>y.kg+'×'+y.reps+(y.rir!=null?' @'+y.rir:'')).join(' · ')}</p>`);h+=`<div class=row><button class="btn g t" onclick="rep(${s.id})">REPETIR</button><button class="btn g t" onclick="del(${s.id})">BORRAR</button></div>`}h+=`</div>`});return h}
+function rep(id){const s=L.sessions.find(x=>x.id==id);L.cur={date:today(),name:s.name,ex:s.ex.map(x=>({n:x.n,t:x.sets.length+' series',sets:x.sets.map(y=>({kg:y.kg,reps:'',rir:'',ok:0}))}))};lsv();S.tab=3;render()}
+function del(id){L.sessions=L.sessions.filter(x=>x.id!=id);lsv();render()}
+function chart(p,u){if(p.length<2)return'<p class=m>Necesitas al menos 2 sesiones para la gráfica.</p>';const W=320,H=130,q=26,v=p.map(a=>a.v),mn=Math.min(...v),mx=Math.max(...v),r=mx-mn||1,x=i=>q+i*(W-2*q)/(p.length-1),y=a=>H-q-(a-mn)/r*(H-2*q);
+return`<svg viewBox="0 0 ${W} ${H}" width=100%><polyline fill=none stroke="#e10600" stroke-width=2.5 points="${p.map((a,i)=>x(i)+','+y(a.v)).join(' ')}"/>${p.map((a,i)=>`<circle cx=${x(i)} cy=${y(a.v)} r=3.5 fill="#e10600"/>`).join('')}<g fill="#8f8f8f" font-size=10><text x=2 y=${y(mx)+3}>${mx}</text><text x=2 y=${y(mn)+3}>${mn}</text><text x=${q} y=${H-6}>${fd(p[0].d)}</text><text x=${W-q} y=${H-6} text-anchor=end>${fd(p[p.length-1].d)}</text></g></svg>`}
+function wk(d){const t=new Date(d+'T00:00');t.setDate(t.getDate()-(t.getDay()+6)%7);return t.toLocaleDateString('en-CA')}
+function prs(){return[...new Set(L.sessions.flatMap(s=>s.ex.map(x=>x.n)))].sort().map(n=>{let b={e:0};L.sessions.forEach(s=>s.ex.forEach(x=>x.n==n&&x.sets.forEach(y=>{const e=e1(y.kg,y.reps);if(e>=b.e)b={e,kg:y.kg,reps:y.reps,d:s.date}})));return{n,...b}})}
+function lvP(){const ns=[...new Set(L.sessions.flatMap(s=>s.ex.map(x=>x.n)))].sort();if(!ns.length)return`<div class=card>Guarda tu primer entreno para ver la progresión.</div>`;if(!ns.includes(LS.px))LS.px=ns[0];const h=hist(LS.px),st=stats(LS.px);
+let o=`<div class=card><label>Ejercicio<select onchange="LS.px=this.value;render()">${ns.map(n=>`<option${n==LS.px?' selected':''}>${esc(n)}</option>`).join('')}</select></label><div class=st><div><b>${st.kg}</b><span>MEJOR KG</span></div><div><b>${st.e1}</b><span>MEJOR e1RM</span></div><div><b>${st.n}</b><span>SESIONES</span></div></div><h3>e1RM por sesión (kg)</h3>${chart(h.map(a=>({d:a.date,v:a.e})))}<h3 style="margin-top:12px">Volumen por sesión (kg)</h3>${chart(h.map(a=>({d:a.date,v:Math.round(a.ton)})))}</div>`;
+const w={};L.sessions.forEach(s=>w[wk(s.date)]=(w[wk(s.date)]||0)+tonS(s));let t=new Date(wk(today())+'T00:00'),b=[];for(let i=0;i<8;i++){const k=t.toLocaleDateString('en-CA');b.push([k,w[k]||0]);t.setDate(t.getDate()-7)}const mx=Math.max(1,...b.map(x=>x[1]));
+o+=`<div class=card><h3>Volumen semanal</h3>${b.reverse().map(([k,v])=>`<div class=bar><span>${fd(k)}</span><div><i style="width:${v/mx*100}%"></i></div><span>${Math.round(v)}</span></div>`).join('')}</div><div class=card><h3>Récords personales</h3><table><tr><th>Ejercicio</th><th>Serie</th><th>e1RM</th></tr>${prs().map(p=>`<tr><td>${esc(p.n)}<br><span class=m>${fd(p.d)}</span></td><td>${p.kg}×${p.reps}</td><td>${p.e}</td></tr>`).join('')}</table><p class=m>e1RM = 1RM estimado (Epley). Solo es orientativo por encima de 12 repeticiones.</p></div>`;return o}
+function lpdfL(){const L2=[],ss=[...L.sessions].sort((a,b)=>a.date<b.date?1:-1);L2.push({c:[[40,'DARK MUSCLE']],z:26,b:1,r:1},{c:[[40,'INFORME DE PROGRESO']],z:12,b:1,g:6},{c:[[40,`${L.sessions.length} entrenos · ${Math.round(L.sessions.reduce((a,s)=>a+tonS(s),0))} kg de volumen total · ${today()}`]],g:10},{c:[[40,'RÉCORDS'],[270,'MEJOR SERIE'],[360,'e1RM'],[430,'FECHA']],b:1,r:1});
+prs().forEach(p=>L2.push({c:[[40,p.n.slice(0,42)],[270,`${p.kg} x ${p.reps}`],[360,''+p.e],[430,p.d]]}));
+L2.push({pb:1,c:[[40,'ÚLTIMOS ENTRENOS']],z:14,b:1,r:1,g:6});ss.slice(0,40).forEach(s=>{L2.push({c:[[40,`${s.date}  ${s.name}`],[400,Math.round(tonS(s))+' kg']],b:1,z:10,g:5});s.ex.forEach(x=>L2.push({c:[[48,x.n.slice(0,34)],[230,x.sets.map(y=>y.kg+'x'+y.reps).join('  ').slice(0,80)]],z:8}))});return L2}
+function lmkPdf(Ls){const P=[];let c=[],y=790;const nw=()=>{P.push(c);c=[];y=790};
+for(const l of Ls){if(l.pb&&c.length)nw();const z=l.z||9,lh=z*1.5+(l.g||0);if(y-lh<50)nw();y-=lh;for(const[x,t]of l.c)c.push(`BT ${l.b?'/F2':'/F1'} ${z} Tf ${l.r?'0.88 0.02 0':'0 0 0'} rg ${x} ${y.toFixed(1)} Td (${en(t)}) Tj ET`)}P.push(c);
+let o='%PDF-1.4\n',of=[];const add=(n,b)=>{of[n]=o.length;o+=n+' 0 obj\n'+b+'\nendobj\n'},N=P.length;
+add(1,'<< /Type /Catalog /Pages 2 0 R >>');add(2,`<< /Type /Pages /Count ${N} /Kids [${P.map((_,i)=>(6+2*i)+' 0 R').join(' ')}] >>`);add(3,'<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');add(4,'<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+P.forEach((p,i)=>{const s='0 0 0 rg 0 812 595 30 re f BT /F2 9 Tf 0.88 0.02 0 rg 40 823 Td (DARK MUSCLE  \xB7  TRAINING LOG) Tj ET\n'+p.join('\n')+`\nBT /F1 8 Tf 0.4 g 40 28 Td (${i+1} / ${N}) Tj ET`;add(5+2*i,`<< /Length ${s.length} >>\nstream\n${s}\nendstream`);add(6+2*i,`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents ${5+2*i} 0 R >>`)});
+const Tn=5+2*N,xr=o.length;o+=`xref\n0 ${Tn}\n0000000000 65535 f \n`+of.slice(1).map(n=>String(n).padStart(10,'0')+' 00000 n \n').join('')+`trailer\n<< /Size ${Tn} /Root 1 0 R >>\nstartxref\n${xr}\n%%EOF`;
+const b=new Uint8Array(o.length);for(let i=0;i<o.length;i++)b[i]=o.charCodeAt(i)&255;return b}
+async function lxp(k){if(!L.sessions.length)return toast('Aún no hay entrenos');let f,d;
+if(k=='pdf'){f='dark-muscle-informe.pdf';d=lmkPdf(lpdfL())}else if(k=='csv'){const r=[['Fecha','Sesión','Ejercicio','Serie','Kg','Reps','RIR','e1RM']];L.sessions.forEach(s=>s.ex.forEach(x=>x.sets.forEach((y,j)=>r.push([s.date,s.name,x.n,j+1,y.kg,y.reps,y.rir==null?'':y.rir,e1(y.kg,y.reps)]))));f='dark-muscle-log.csv';d='\uFEFF'+r.map(a=>a.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n')}
+else{f='dark-muscle-log.json';d=JSON.stringify({app:'DARK MUSCLE TRAINING LOG',v:1,sessions:L.sessions},null,1)}
+try{const D=window.claude&&await claude.use('downloads');if(D){await D.save({filename:f,data:d});return toast('Archivo listo')}}catch(e){if(e&&e.code=='declined')return}
+const u=URL.createObjectURL(new Blob([d],{type:k=='pdf'?'application/pdf':'text/plain'})),a=document.createElement('a');a.href=u;a.download=f;document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(u)},5000);toast('Archivo listo')}
+
+function vL(){return`<div class=card><h3>Registro de entrenos</h3><button class=btn onclick="lxp('pdf')">INFORME DE PROGRESO (PDF)</button><button class="btn g" onclick="lxp('csv')">REGISTRO EDITABLE (CSV)</button><button class="btn g" onclick="lxp('json')">COPIA DEL REGISTRO (JSON)</button><label>Importar copia del registro (reemplaza tus entrenos)<input type=file accept=".json,application/json" onchange="lim(this)"></label><p class=m>Gratis y sin cuenta. Rutinas y registro se guardan solo en este dispositivo: haz copias de seguridad.</p></div>`}
+async function lim(i){try{const j=JSON.parse(await i.files[0].text());if(!Array.isArray(j.sessions))throw 0;L.sessions=j.sessions;lsv();render();toast('Registro importado')}catch(e){toast('Archivo no válido')}}
+const _vX=vX;vX=function(){return _vX()+vL()};
+
+/* ===== PRO: cuenta, sincronización, gating, analítica, recuperación ===== */
+const CF=window.DM_CONFIG||{},SB=(window.supabase&&CF.SUPABASE_URL&&CF.SUPABASE_ANON_KEY)?window.supabase.createClient(CF.SUPABASE_URL,CF.SUPABASE_ANON_KEY):null;
+let A={user:null,pro:false,admin:false,sub:null,conf:null,msg:'',ack:false,adm:null,rec:false,sync:''},PGN=[];
+const PL=t=>A.pro?t:t+' 🔒';
+function needPro(){toast('Función PRO: consulta los planes en CUENTA')}
+const _cf=cf;cf=function(k,v){if(!A.pro&&((k=='model'&&v!='lineal')||(k=='de'&&+v>0)||(k=='weeks'&&+v>6))){needPro();render();return}_cf(k,v)};
+const _gen=gen;gen=function(){if(!A.pro){const c=R.cfg;if(c.model!='lineal'||+c.de>0||+c.weeks>6){c.model='lineal';c.de=0;c.weeks=Math.min(6,+c.weeks);toast('Plan FREE: lineal, máx. 6 semanas, sin descarga')}}_gen()};
+/* --- recuperación ante errores (anti pantalla blanca) --- */
+function logErr(m){if(SB)SB.from('app_errors').insert({message:String(m).slice(0,300),path:location.pathname.slice(0,150),ua:(navigator.userAgent||'').slice(0,150)}).then(()=>{},()=>{})}
+function rec(m){try{const b={};['dmrb.v1','dmlog.v1'].forEach(k=>b[k]=localStorage.getItem(k));window.__bk=JSON.stringify(b)}catch(e){}
+const o=$('#rec');o.style.display='block';o.innerHTML=`<div class=card><h3>Algo ha fallado</h3><p>Tus datos no se han borrado. Puedes descargar una copia, recargar o restablecer.</p><textarea rows=5 readonly>${esc('DARK MUSCLE PRO · '+(navigator.userAgent||'')+' · '+m)}</textarea><button class=btn onclick="location.reload()">RECARGAR</button><button class="btn g" onclick="dl('dark-muscle-copia-local.json',window.__bk||'{}')">DESCARGAR COPIA LOCAL</button><button class="btn g" id=rz onclick="rzz()">RESTABLECER DATOS LOCALES</button></div>`;logErr(m)}
+let rzn=0;function rzz(){if(!rzn++){$('#rz').textContent='TOCA OTRA VEZ PARA BORRAR';return}try{localStorage.removeItem('dmrb.v1');localStorage.removeItem('dmlog.v1')}catch(e){}location.reload()}
+window.addEventListener('error',e=>rec(e.message||'error'));window.addEventListener('unhandledrejection',e=>rec(String((e.reason&&e.reason.message)||e.reason)));
+/* --- sincronización con la nube (documento por usuario) --- */
+let ST=null;
+const _sv=sv;sv=function(){_sv();push()};const _lsv=lsv;lsv=function(){_lsv();push()};
+function push(){if(!SB||!A.user||A.conf)return;clearTimeout(ST);ST=setTimeout(async()=>{const{error}=await SB.from('user_data').upsert({user_id:A.user.id,routine:R,sessions:L.sessions});A.sync=error?(/free_limit/.test(error.message)?'Límite FREE de historial en la nube alcanzado: tus datos siguen guardados en este dispositivo. Premium amplía la sincronización.':'Error de sincronización: '+error.message):'Sincronizado '+new Date().toLocaleTimeString();if(S.tab==8)render()},1200)}
+function apply(d){try{localStorage.setItem('dmpro.backup',JSON.stringify({R,sessions:L.sessions,at:Date.now()}))}catch(e){}if(d.routine&&Array.isArray(d.routine.days)){R=Object.assign({},R,d.routine);R.cfg=Object.assign({},DEF,R.cfg)}L.sessions=Array.isArray(d.sessions)?d.sessions:[];_sv();_lsv();A.conf=null}
+async function pull(){const{data,error}=await SB.from('user_data').select('routine,sessions').eq('user_id',A.user.id).maybeSingle();if(error){A.sync='No se pudo leer la nube: '+error.message;return}
+const loc=R.days.length||L.sessions.length,cd=data&&((data.routine&&data.routine.days&&data.routine.days.length)||(data.sessions||[]).length);
+if(!cd){if(loc)push();return}if(!loc){apply(data);return}
+if(JSON.stringify({r:R.days,s:L.sessions})===JSON.stringify({r:(data.routine&&data.routine.days)||[],s:data.sessions}))return;A.conf=data}
+function cres(k){const c=A.conf;if(k=='cloud')apply(c);else{try{localStorage.setItem('dmpro.cloudbackup',JSON.stringify(c))}catch(e){}if(k=='merge'){const ids=new Set(L.sessions.map(s=>s.id));(c.sessions||[]).forEach(s=>{if(!ids.has(s.id))L.sessions.push(s)});if(!R.days.length&&c.routine&&Array.isArray(c.routine.days))R=Object.assign({},R,c.routine)}A.conf=null;_sv();_lsv();push()}render()}
+/* --- cuenta --- */
+async function aSet(s){A.user=s?s.user:null;A.pro=false;A.sub=null;A.admin=false;if(A.user){const[p,u]=await Promise.all([SB.from('profiles').select('is_admin').eq('id',A.user.id).maybeSingle(),SB.from('subscriptions').select('status,plan,current_period_end,cancel_at_period_end').eq('user_id',A.user.id).maybeSingle()]);A.admin=!!(p.data&&p.data.is_admin);A.sub=u.data;A.pro=!!u.data&&['active','trialing'].includes(u.data.status)&&(!u.data.current_period_end||new Date(u.data.current_period_end)>new Date());await pull()}render()}
+async function aInit(){if(!SB)return;const{data}=await SB.auth.getSession();await aSet(data.session);SB.auth.onAuthStateChange((e,s)=>{if(e=='PASSWORD_RECOVERY')A.rec=true;if(e=='SIGNED_IN'||e=='SIGNED_OUT'||e=='PASSWORD_RECOVERY')setTimeout(()=>aSet(s),0)})}
+async function aref(){const{data}=await SB.auth.getSession();await aSet(data.session);toast('Estado actualizado')}
+async function au(k){const em=$('#ae').value.trim(),pw=$('#ap').value;if(!em)return toast('Introduce tu email');let r;
+if(k=='in')r=await SB.auth.signInWithPassword({email:em,password:pw});
+else if(k=='up'){if(pw.length<8)return toast('Mínimo 8 caracteres');r=await SB.auth.signUp({email:em,password:pw,options:{emailRedirectTo:location.origin+location.pathname}});if(!r.error)A.msg='Revisa tu email para confirmar la cuenta.'}
+else{r=await SB.auth.resetPasswordForEmail(em,{redirectTo:location.origin+location.pathname});if(!r.error)A.msg='Si el email existe, recibirás un enlace para recuperar el acceso.'}
+if(r.error)A.msg=r.error.message;render()}
+async function npw(){const p=$('#np').value;if(p.length<8)return toast('Mínimo 8 caracteres');const r=await SB.auth.updateUser({password:p});A.rec=false;A.msg=r.error?r.error.message:'Contraseña actualizada.';render()}
+async function ck(plan){if(!A.ack)return toast('Acepta las condiciones primero');const{data,error}=await SB.functions.invoke('create-checkout',{body:{plan}});if(error||!data||!data.url){A.msg='No se pudo iniciar el pago. Inténtalo de nuevo.';return render()}location.href=data.url}
+async function bp(){const{data,error}=await SB.functions.invoke('billing-portal');if(error||!data||!data.url){A.msg='No se pudo abrir la gestión de suscripción.';return render()}location.href=data.url}
+async function dacc(){if($('#dc').value!=='ELIMINAR')return toast('Escribe ELIMINAR');const{error}=await SB.functions.invoke('delete-account');if(error)return toast('No se pudo eliminar');await SB.auth.signOut();A.msg='Cuenta y datos en la nube eliminados. Tus datos locales siguen en este dispositivo.';render()}
+function exme(){dl('dark-muscle-mis-datos.json',JSON.stringify({email:A.user.email,routine:R,sessions:L.sessions,sub:A.sub},null,1))}
+function legal(){return`<div class=card><h3>Información legal (BORRADOR)</h3><details><summary>Privacidad</summary><p class=m>Borrador para revisión profesional (RGPD/LOPDGDD). Datos tratados: email, rutinas y entrenos si creas cuenta; el pago lo procesa Stripe y esta app no ve tu tarjeta. Finalidad: prestar el servicio. Puedes exportar tus datos y eliminar tu cuenta desde CUENTA. Las facturas pueden conservarse en Stripe por obligación legal. Completa aquí: responsable, contacto, bases jurídicas, plazos y encargados del tratamiento.</p></details><details><summary>Términos</summary><p class=m>Borrador para revisión profesional. Entrenamiento orientativo: no es consejo médico; consulta a un profesional antes de empezar. Suscripción con renovación automática hasta que se cancele; cancelación desde Gestionar suscripción. Si dejas de pagar no pierdes tus datos: se mantienen las funciones FREE. Completa: política de devoluciones y desistimiento, precios, impuestos y datos del vendedor.</p></details></div>`}
+function vA(){let h=A.msg?`<div class=card><b>${esc(A.msg)}</b></div>`:'';
+if(!SB)return h+`<div class=card><h3>Modo local</h3><p>El backend no está configurado: la app funciona sin cuenta y guarda todo en este dispositivo. Para activar cuentas, sincronización y Premium sigue el README y rellena config.js.</p></div>`+legal();
+if(A.rec)return h+`<div class=card><h3>Nueva contraseña</h3><label>Contraseña<input id=np type=password></label><button class=btn onclick="npw()">GUARDAR</button></div>`;
+if(!A.user)return h+`<div class=card><h3>Accede</h3><label>Email<input id=ae type=email autocomplete=email></label><label>Contraseña<input id=ap type=password autocomplete=current-password></label><button class=btn onclick="au('in')">ENTRAR</button><button class="btn g" onclick="au('up')">CREAR CUENTA</button><button class="btn g" onclick="au('rs')">RECUPERAR ACCESO</button><p class=m>Sin cuenta puedes usar FREE en local. Al entrar, tus datos locales se pueden migrar a la nube sin sobrescribir nada en silencio.</p></div>`+legal();
+const s=A.sub,pd=s&&s.status=='past_due';
+h+=`<div class=card><h3>Tu cuenta</h3><p>${esc(A.user.email)}</p><p>Plan: <b>${A.pro?'PREMIUM':'FREE'}</b>${s&&s.plan?' · '+(s.plan=='yearly'?'anual':'mensual'):''}</p>`;
+if(s&&s.current_period_end)h+=`<p class=m>${s.cancel_at_period_end?'Se cancela el':'Próxima renovación:'} ${s.current_period_end.slice(0,10)}</p>`;
+if(pd)h+=`<p class=pr>Pago fallido: actualiza tu método de pago en Gestionar suscripción para recuperar el acceso.</p>`;
+if(A.pro||pd)h+=`<button class=btn onclick="bp()">GESTIONAR SUSCRIPCIÓN</button>`;
+h+=`<button class="btn g" onclick="aref()">ACTUALIZAR ESTADO</button><p class=m>${esc(A.sync)}</p></div>`;
+if(A.conf)h+=`<div class=card><h3>Datos distintos en la nube</h3><p class=m>Tienes datos en este dispositivo y en tu cuenta. Elige qué hacer (se guarda una copia de lo que se sustituya).</p><button class=btn onclick="cres('merge')">FUSIONAR (RECOMENDADO)</button><button class="btn g" onclick="cres('cloud')">USAR LA NUBE</button><button class="btn g" onclick="cres('local')">USAR ESTE DISPOSITIVO</button></div>`;
+if(!A.pro&&!pd)h+=`<div class=card><h3>Hazte PREMIUM</h3><p>Mesociclos y descargas, modelos ondulado y por bloques, analítica muscular, progresión adaptativa, comparativas, informes avanzados y más historial sincronizado.</p><table><tr><td>Mensual</td><td>${esc(CF.PRICE_MONTHLY_LABEL||'Precio sin configurar')}</td></tr><tr><td>Anual</td><td>${esc(CF.PRICE_YEARLY_LABEL||'Precio sin configurar')}</td></tr></table><p class=m>Se renueva automáticamente hasta que canceles. Impuestos: ${esc(CF.TAX_NOTE||'se muestran en el checkout')}. Cancelación: en Gestionar suscripción, efectiva al final del periodo ya pagado. Devoluciones: ${esc(CF.REFUND_NOTE||'política por definir antes del lanzamiento')}. El pago se hace en Stripe: esta app nunca ve tu tarjeta, y el acceso solo se activa cuando el proveedor lo confirma.</p><label style="display:flex;gap:8px;align-items:center"><input type=checkbox style="width:24px;min-height:24px;margin:0" onchange="A.ack=this.checked">He leído y acepto estas condiciones</label><button class=btn onclick="ck('monthly')">PREMIUM MENSUAL</button><button class="btn g" onclick="ck('yearly')">PREMIUM ANUAL</button></div>`;
+h+=`<div class=card><h3>Tus datos</h3><button class="btn g" onclick="exme()">DESCARGAR MIS DATOS</button><label>Eliminar cuenta y datos en la nube (escribe ELIMINAR)<input id=dc></label><button class="btn g" onclick="dacc()">ELIMINAR CUENTA</button><button class="btn g" onclick="SB.auth.signOut()">CERRAR SESIÓN</button></div>`;return h+legal()}
+/* --- PRO: analítica, progresión, comparativas, informes --- */
+const dAgo=n=>{const t=new Date();t.setDate(t.getDate()-n);return t.toLocaleDateString('en-CA')};
+const muOf=n=>{const e=E.find(x=>x.n==n);return e?e.m:'Sin clasificar'};
+function mvol(a,b){const v={},f={};L.sessions.forEach(s=>{if(s.date<a||s.date>=b)return;const seen={};s.ex.forEach(x=>{const m=muOf(x.n);v[m]=(v[m]||0)+x.sets.length;if(!seen[m]){seen[m]=1;f[m]=(f[m]||0)+1}})});return{v,f}}
+function lock(){return`<div class=card><h3>🔒 DARK MUSCLE PRO</h3><p>Analítica muscular, progresión adaptativa, comparativa de periodos e informes avanzados, además de mesociclos, descargas y modelos ondulado y por bloques en el generador.</p><button class=btn onclick="S.tab=8;render()">VER PLANES</button></div>`}
+function vMA(){let h=`<div class=card><h3>Analítica muscular (últimas 4 semanas)</h3>`;if(!L.sessions.length)return h+'<p class=m>Registra entrenos para ver datos.</p></div>';const a=mvol(dAgo(28),dAgo(-1)),b=mvol(dAgo(56),dAgo(28));
+h+='<table><tr><th>Músculo</th><th>Series/sem</th><th>Frec.</th><th>vs previo</th><th>Estado</th></tr>';
+[...MU,'Sin clasificar'].forEach(m=>{if(!a.v[m]&&!b.v[m])return;const s=(a.v[m]||0)/4,p=(b.v[m]||0)/4,l=LM[m],st=!l?'-':s<l[0]?'bajo':s<=l[1]?'óptimo':s<=l[2]?'alto':'excesivo';h+=`<tr><td>${m}</td><td>${s.toFixed(1)}</td><td>${((a.f[m]||0)/4).toFixed(1)}×</td><td>${p?(s>=p?'+':'')+Math.round((s-p)/p*100)+' %':'-'}</td><td>${st}</td></tr>`});
+return h+'</table><p class=m>Solo cuenta series directas por el músculo principal de cada ejercicio (no estima trabajo indirecto) y depende de lo que hayas registrado. Rangos de referencia aproximados, no individualizados.</p></div>'}
+function vCMP(){const f=(a,b)=>L.sessions.filter(s=>s.date>=a&&s.date<b),x=f(dAgo(28),dAgo(-1)),y=f(dAgo(56),dAgo(28)),t=a=>Math.round(a.reduce((q,s)=>q+tonS(s),0)),d=(a,b)=>b?((a>=b?'+':'')+Math.round((a-b)/b*100)+' %'):'-';return`<div class=card><h3>Comparativa de periodos</h3><table><tr><th></th><th>Últ. 4 sem.</th><th>4 previas</th><th>Cambio</th></tr><tr><td>Entrenos</td><td>${x.length}</td><td>${y.length}</td><td>${d(x.length,y.length)}</td></tr><tr><td>Volumen (kg)</td><td>${t(x)}</td><td>${t(y)}</td><td>${d(t(x),t(y))}</td></tr></table></div>`}
+const routineEx=n=>{for(const d of R.days){const x=d.ex.find(y=>y.n==n);if(x)return x}return null};
+function sug(n){const h=hist(n);if(h.length<2)return null;const l=h[h.length-1],p=h[h.length-2],x=routineEx(n),lo=x?x.reps[0]:6,hi=x?x.reps[1]:12,w=l.kg,inc=w<40?1.25:w<100?2.5:5,s=l.sets;
+const up=w>0&&s.every(y=>y.reps>=hi&&(y.rir==null||y.rir>=1));let t,why,kg=w;
+if(up){kg=w+inc;t='Subir a '+kg+' kg';why=`Hiciste ${hi}+ reps en todas las series de ${w} kg dejando margen (RIR ≥1).`}
+else if(h.length>=4&&h.slice(-3).every(a=>a.e<=Math.max(...h.slice(0,-3).map(b=>b.e)))){t='Posible estancamiento';why='3 sesiones seguidas sin superar tu mejor 1RM estimado previo. Revisa descanso, volumen y técnica; valora una descarga.'}
+else if(s.some(y=>y.reps<lo)&&p.sets.some(y=>y.reps<lo)){t='Mantener carga';why='Dos sesiones seguidas con series por debajo de '+lo+' reps. Mantén (o baja ~5 %) y busca acumular repeticiones.'}
+else{t='Mantener '+w+' kg';why='Sigue sumando repeticiones hasta '+hi+' en todas las series antes de subir.'}
+return{n,t,why,kg,date:l.date,up}}
+function sgo(i,ok){const n=PGN[i],g=sug(n);L.prog=L.prog||{};L.prog[n]={kg:g.kg,on:g.date,st:ok?'ok':'no'};lsv();render()}
+function vPG(){PGN=[...new Set(L.sessions.flatMap(s=>s.ex.map(x=>x.n)))];let h='<div class=card><h3>Progresión adaptativa</h3>',c=0;PGN.forEach((n,i)=>{const g=sug(n);if(!g)return;c++;const pr=(L.prog||{})[n];h+=`<div class=ex><b>${esc(n)}</b> <span class=pr>${g.t}</span><p class=m>${g.why}</p>`+(pr&&pr.on==g.date?`<p class=m>${pr.st=='ok'?'Aceptada: se precargará en tu próximo entreno.':'Rechazada para esta sesión.'}</p>`:g.up?`<div class=row><button class="btn g t" onclick="sgo(${i},1)">ACEPTAR</button><button class="btn g t" onclick="sgo(${i},0)">RECHAZAR</button></div>`:'')+'</div>'});
+return h+(c?'':'<p class=m>Necesitas al menos 2 sesiones de un ejercicio.</p>')+'<p class=m>Nunca se cambia tu carga sin tu confirmación. Una sola mala sesión no cambia la recomendación.</p></div>'}
+function apdf(){const Ls=lpdfL(),a=mvol(dAgo(28),dAgo(-1));Ls.push({pb:1,c:[[40,'ANALÍTICA MUSCULAR (4 SEMANAS)']],z:14,b:1,r:1,g:6});Object.keys(a.v).forEach(m=>Ls.push({c:[[40,m],[220,(a.v[m]/4).toFixed(1)+' series/sem'],[340,((a.f[m]||0)/4).toFixed(1)+' x/sem']]}));Ls.push({c:[[40,'PROGRESIÓN SUGERIDA']],b:1,r:1,g:6,z:12});[...new Set(L.sessions.flatMap(s=>s.ex.map(x=>x.n)))].forEach(n=>{const g=sug(n);if(g)Ls.push({c:[[40,n.slice(0,34)],[230,g.t]]})});dl('dark-muscle-pro-informe.pdf',lmkPdf(Ls))}
+function vPRO(){if(!A.pro)return lock();return vMA()+vPG()+vCMP()+`<button class=btn onclick="apdf()">INFORME AVANZADO (PDF)</button>`}
+const _lvP=lvP;lvP=function(){const w0=wk(today()),n=L.sessions.filter(s=>s.date>=w0).length,g=L.goal||3;return`<div class=card><h3>Objetivo semanal</h3><div class=bar><span>${n}/${g}</span><div><i style="width:${Math.min(100,n/g*100)}%"></i></div><span>${n>=g?'¡Cumplido!':'sesiones'}</span></div><label>Entrenos por semana<input type=number inputmode=numeric value=${g} onchange="L.goal=Math.max(1,+this.value||3);lsv();render()"></label></div>`+_lvP()};
+/* --- administración (autorizada en servidor por RLS/RPC) --- */
+async function ad0(){const r=await SB.rpc('admin_metrics');A.adm=r.error?{err:r.error.message}:r.data;render()}
+async function adc(){const r=await SB.rpc('admin_set_config',{k:'free_session_limit',v:String(parseInt($('#fl').value)||100)});toast(r.error?'Error':'Guardado');A.adm=null;render()}
+function vAD(){if(!A.admin)return'<div class=card>Sin acceso.</div>';if(!A.adm){ad0();return'<div class=card>Cargando…</div>'}const m=A.adm;if(m.err)return`<div class=card>Error: ${esc(m.err)}</div>`;
+return`<div class=card><h3>Métricas</h3><div class=st><div><b>${m.users}</b><span>USUARIOS</span></div><div><b>${(m.subs.active||0)+(m.subs.trialing||0)}</b><span>PREMIUM</span></div><div><b>${m.subs.past_due||0}</b><span>IMPAGOS</span></div></div><p class=m>Estados: ${esc(JSON.stringify(m.subs))}</p><button class="btn g" onclick="A.adm=null;render()">ACTUALIZAR</button></div><div class=card><h3>Configuración FREE</h3><label>Límite de sesiones sincronizadas<input id=fl type=number value="${esc(m.config.free_session_limit||100)}"></label><button class=btn onclick="adc()">GUARDAR</button></div><div class=card><h3>Eventos de facturación</h3><table>${m.events.map(e=>`<tr><td>${esc(e.type)}</td><td>${esc((e.processed_at||'pendiente').slice(0,16))}</td></tr>`).join('')}</table></div><div class=card><h3>Errores recientes</h3><table>${m.errors.map(e=>`<tr><td>${esc(e.created_at.slice(0,16))}</td><td>${esc(e.message)}</td></tr>`).join('')}</table></div>`}
+function dl(f,d){const u=URL.createObjectURL(new Blob([d],{type:f.endsWith('.pdf')?'application/pdf':'text/plain'})),a=document.createElement('a');a.href=u;a.download=f;document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(u)},5000);toast('Archivo listo')}
+(function(){R.days=(Array.isArray(R.days)?R.days:[]).filter(d=>d&&Array.isArray(d.ex));L.sessions=(Array.isArray(L.sessions)?L.sessions:[]).filter(s=>s&&Array.isArray(s.ex));
+if(/checkout=success/.test(location.search)){A.msg='Pago recibido. El acceso Premium se activa cuando el proveedor lo confirma (suele tardar unos segundos): pulsa ACTUALIZAR ESTADO.';S.tab=8;try{history.replaceState(null,'',location.pathname)}catch(e){}}
+aInit()})();
+
+render();
+
+
+</script></body></html>
